@@ -7,7 +7,13 @@ kube-env-a:
 kube-dep-a:
 	@ kubectl apply -f ./k8s/.
 
-kube-a: kube-env-a kube-dep-a
+kube-vol-d:
+	@ kubectl delete pvc -l owner-namespace=decauth-volumes
+	@ kubectl delete pv -l owner-namespace=decauth-volumes
 
-kube-r:
+up: kube-env-a kube-dep-a
+
+down:
 	@ kubectl delete all --all
+
+down-v: down kube-vol-d

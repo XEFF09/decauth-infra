@@ -1,1 +1,1 @@
-k8s/kustomization/.env
+k8s/kustomization/prod.env

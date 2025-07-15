@@ -4,7 +4,7 @@ kind: Kustomization
 configMapGenerator:
   - name: env
     envs:
-      - .env
+      - prod.env
 
 generatorOptions:
   disableNameSuffixHash: true

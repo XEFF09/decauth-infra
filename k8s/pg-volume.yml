@@ -5,6 +5,7 @@ metadata:
   labels:
     type: local
     app: decauth-pg
+    owner-namespace: decauth-volumes
 spec:
   storageClassName: manual
   capacity:
@@ -20,6 +21,7 @@ metadata:
   name: decauth-pg-volume-claim
   labels:
     app: decauth-pg
+    owner-namespace: decauth-volumes
 spec:
   storageClassName: manual
   accessModes:
